@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class Graph {
 
@@ -69,7 +68,6 @@ public class Graph {
             path.add(prevConnections[crawl]);
             crawl = prevConnections[crawl];
         }
-
         
         System.out.println("There is a connection from " + userSrc + " to " + userDst + "!");
         for(int i = path.size() - 1; i >= 0; i--) {

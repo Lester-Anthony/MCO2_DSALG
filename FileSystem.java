@@ -1,7 +1,5 @@
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -125,16 +123,3 @@ public class FileSystem {
 
     }
 }
-
-        // // Writing to a file
-
-        //     BufferedWriter writeFile;
-        //     writeFile = new BufferedWriter(new FileWriter("output.txt"));
-        //     writeFile.write("Writing to a file.");
-        //     writeFile.write("\nHere is another line.");
-            
-        //     for (String name : names) {
-        //         writeFile.write("\n" + name);
-        //     }
-            
-        //     writeFile.close();
