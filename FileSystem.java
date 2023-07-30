@@ -87,7 +87,7 @@ public class FileSystem {
                         case 1 : // [1] GET FRIEND LIST
                             System.out.print("Enter ID of person: ");
                             int user = -1;
-                            while(user < 0 || user > graph.getGraph().size()) {
+                            while(user < 0 || user > graph.getGraph().size() -1) {
                                 user = sc.nextInt();
                             }
                             System.out.println();
@@ -97,13 +97,13 @@ public class FileSystem {
                         case 2 : // [2] GET CONNECTION
                             System.out.print("\nEnter ID of first person: ");
                             int userSrc = -1;
-                            while(userSrc < 0 || userSrc > graph.getGraph().size()) {
+                            while(userSrc < 0 || userSrc > graph.getGraph().size() -1) {
                                 userSrc = sc.nextInt();
                             }
 
                             System.out.print("Enter ID of second person: ");
                             int userDst = -1;
-                            while(userDst < 0 || userDst > graph.getGraph().size()) {
+                            while(userDst < 0 || userDst > graph.getGraph().size() -1) {
                                 userDst = sc.nextInt();
                             }
             
