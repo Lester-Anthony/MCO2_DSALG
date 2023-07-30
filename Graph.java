@@ -95,9 +95,11 @@ public class Graph {
         distConnections[userSrc] = 0;
         queue.add(userSrc);
 
+        boolean returnFlag = false;
+
         while(!queue.isEmpty()) {
             int u = queue.remove();
-            for(int i = 0; i < graph.get(u).size(); i++) {
+            for(int i = 0; i < graph.get(u).size() && returnFlag == false; i++) {
                 if(visited[graph.get(u).get(i)] == false) {
                     visited[graph.get(u).get(i)] = true;
                     distConnections[graph.get(u).get(i)] = distConnections[u] + 1;
@@ -105,11 +107,14 @@ public class Graph {
                     queue.add(graph.get(u).get(i));
 
                     if(graph.get(u).get(i) == userDst)
-                        return true;
+                        returnFlag = true;
                 }
             }
         }
-        return false;
+        if(returnFlag)
+            return true;
+        else
+            return false;
     }
 }
 
